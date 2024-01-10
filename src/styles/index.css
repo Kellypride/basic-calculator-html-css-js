@@ -1,36 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    /* remove all exixting padding and margins */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* include padding and margin of an element with width and height*/
+}
+
+html {
+    font-size: 20px;
+    font-family: 'montserrat', sans-serif;
+    color: #2c3e50;
+}
+
 body {
     /* display: flex; */
     background-color: aquamarine;
 }
+
 h1{
     text-align: center;
     padding: 20px 0px 60px 0px;
+    display: flex;
 }
-
+/* parent div */
 .calculator {
-    background-color: pink;
     text-align: center;
     color: #2c3e50;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-    max-width: 440px;
+    max-width: 500px;
     padding: 20px;
     border-radius: 5px;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: #333333;
+} 
+
+.display {
+    width: 100%;
+    height: 30px;
+    background-color: black;
 }
 
  input[type= "text"] {
-  width: 420px;
-  height: 50px;
-  border: 1px solid black;
-  /* background-color: #333333;
-  color: #d9d9d9;  */
-  /* padding: 10px; */
-  margin-bottom: 10px;
-  font-size: 24px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    /* background-color: #333333; */
+    color: #d9d9d9; 
+    /* padding: 10px; */
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 1rem;
+    border: 2px solid black;
+    
 }
 
 .button {
@@ -42,16 +67,62 @@ h1{
   color: #d9d9d9;
   background-color: #1a1a1a;
   cursor: pointer;
+  /* outline: auto; */
   outline: none;
 }
 
-.mode {
+.equal-sign {
+  background-color: rgb(19, 70, 19);
+  width: 133px;
+}
+
+/* start of @mediaquery*/
+/* For desktop */
+.buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly ;
 }
-
-.equal-sign {
-  background-color: green;
-  width: 133px;
+/* FOr Mobile */
+@media (min-width: 200px) {
+        .calculator {
+        grid-template-columns: repeat(3, 1fr);
+        width: 150px;
+    }
+    
 }
+@media (max-width: 480px) {
+    .calculator {
+        grid-template-columns: repeat(3, 1fr);
+        width: 150px;
+    }
+    h1 {
+        word-wrap: breake-word;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        word-wrap: breake-word;
+    }
+}
+
+/* for Tablets  */
+@media (max-width: 768px) {
+    .calculator {
+        grid-template-columns: 4, 1fr;
+        /* width: 300px;  */
+    }
+}
+ /* for larger devices */
+  @media (max-width: 1200px) {
+    .calculator{
+        grid-template-columns: 4 1fr;
+    }
+  }
+
+
+
+
+
+
+/* start of @mediaquery*/
