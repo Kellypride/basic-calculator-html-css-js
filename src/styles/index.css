@@ -8,9 +8,9 @@
 }
 
 html {
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'montserrat', sans-serif;
-    color: #2c3e50;
+    color: black;
 }
 
 body {
@@ -38,22 +38,26 @@ h1{
 } 
 
 .display {
-    width: 100%;
-    height: 30px;
+    width: 97%;
+    height: 60px;
     background-color: black;
+
 }
 
  input[type= "text"] {
     width: 100%;
-    height: 30px;
+    height: 100%;
     border: 1px solid black;
-    /* background-color: #333333; */
-    color: #d9d9d9; 
+    background-color: #333333;
+    color: white; 
     /* padding: 10px; */
     margin-bottom: 10px;
     font-size: 30px;
     letter-spacing: 1rem;
-    border: 2px solid black;
+    border: 1px solid black;
+    justify-content: right;
+    text-align: right;
+    letter-spacing: 2px;
     
 }
 
@@ -81,7 +85,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    max-width: 100%;
+    width: 100%;
 }
 .goniometric { /*spans 6 colors 2 rows */
     grid-column: 1 / span 6;
