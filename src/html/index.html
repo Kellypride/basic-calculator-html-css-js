@@ -9,53 +9,55 @@
     <body>
         <h1>Scientific Calculator</h1>
         <div class="calculator">
-            <div class="display">
-                <input type="text" id="display" disabled>
+            <div class="display ">
+                <input type="text" id="result" enabled>
             </div>
             <div class="buttons">
                 <div class="goniometric">
-                    <button class="button" onclick="display('sin')">sin</button>
-                    <button class="button" onclick="display('')">cos</button>
-                    <button class="button">tan</button>
-                    <button class="button">x^</button>
-                    <button class="button">&#60;=</button>
-                    <button class="button">C</button>
-                    <button class="button">log</button>
-                    <button class="button">ln</button>
-                    <button class="button">e</button>
-                    <button class="button">∘</button>
-                    <button class="button">rad</button>
-                    <button class="button">√</button>
+                    <button class="button" onclick="evaluator('result', calculateSin, result.value)">sin</button>
+                    <button class="button" onclick="evaluator('result', calculateCos, result.value)">cos</button>
+                    <button class="button" onclick="evaluator('result', calculateTan, result.value)">tan</button>
+                    <button class="button" id="powerNumber"">x^</button>
+                    <button class="button" onclick="evaluator('result', deleteResult, result.value)">DEL</button>
+                    <button class="button" onclick="evaluator('result', clearScreen, result.value)">AC</button>
+                    <button class="button" onclick="evaluator('result', calculateLog, result.value)">log</button>
+                    <button class="button" onclick="evaluator('result', calculateLn, result.value)">ln</button>
+                    <button class="button" onclick="evaluator('result', calculateExponent, result.value)">e</button>
+                    <button class="button" onclick="evaluator('result', calculateDegree, result.value)">∘</button>
+                    <button class="button" onclick="evaluator('result', calculateRadian, result.value)" >rad</button>
+                    <button class="button" onclick="evaluator('result', calculatesqrt, result.value)">√</button>
                 </div>
                 <div class="numbers">
-                    <button class="button">7</button>
-                    <button class="button">8</button>
-                    <button class="button">9</button>
-                    <button class="button">4</button>
-                    <button class="button">5</button>
-                    <button class="button">6</button>
-                    <button class="button">1</button>
-                    <button class="button">2</button>
-                    <button class="button">3</button>
-                    <button class="button">0</button>
-                    <button class="button">&#x003C0;</button>
-                    <button class="button">.</button>
+                    <button class="button" id="numbers">7</button>
+                    <button class="button" id="numbers">8</button>
+                    <button class="button" id="numbers">9</button>
+                    <button class="button" id="numbers">4</button>
+                    <button class="button" id="numbers">5</button>
+                    <button class="button" id="numbers">6</button>
+                    <button class="button" id="numbers">1</button>
+                    <button class="button" id="numbers">2</button>
+                    <button class="button" id="numbers">3</button>
+                    <button class="button" id="numbers">0</button>
+                    <button class="button" onclick="evaluator('result', calculatePi, result.value)">π</button>
+                    <button class="button" onclick="display('.')">.</button>
                 </div>
                     <div class="normal">
-                    <button class="button">/</button>
-                    <button class="button">x ²</button>
-                    <button class="button">x !</button>
-                    <button class="button">*</button>
-                    <button class="button">(</button>
-                    <button class="button">)</button>
-                    <button class="button">-</button>
-                    <button class="button">%</button>
-                    <button class="button">±</button>
-                    <button class="button">+</button>
-                    <button class="button equal-sign">=</button>
+                    <button class="button" id="operators">/</button>
+                    <button class="button" onclick="evaluator('result', calculatepow, result.value)">x ²</button>
+                    <button class="button" onclick="evaluator('result', calculateFactorial, result.value)">x !</button>
+                    <button class="button" id="operators">*</button>
+                    <button class="button" id="bracket">(</button>
+                    <button class="button" id="bracket">)</button>
+                    <button class="button" id="operators"">-</button>
+                    <button class="button" id="operators"">%</button>
+                    <button class="button" onclick="display('-')">±</button>
+                    <button class="button" id="operators">+</button>
+                    <button class="button equal-sign" onclick="evaluator('result', calculate, result.value)">=</button>
+                    <!-- <button class="button equal-sign" onclick="document.getElementById('result').value = calculate(document.getElementById('results'))">=</button> -->
                 </div>
             </div>
         </div>
         <script src="../scripts/index.js"></script>
+        <script src="../scripts/math.js"></script>
     </body>
 </html>
